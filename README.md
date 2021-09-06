@@ -1,5 +1,7 @@
 # Topographic Variational Autoencoder
 
+*Paper*: https://arxiv.org/abs/2109.01394
+
 ## Getting Started
 #### Install requirements with Anaconda:
 `conda env create -f environment.yml`
