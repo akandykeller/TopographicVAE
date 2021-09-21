@@ -22,33 +22,33 @@ For more information on making a Weight & Biases account see [(creating a weight
 
 ## Running an experiment
 To rerun the experiment from Figure 3, you can run:
-- `tvae --name 'tvae_2d_mnist'`
+- `tvae --name tvae_2d_mnist`
 
 To rerun the experiments from Figure 4, you can run:
-- `tvae --name 'tvae_Lpartial_mnist'`
-- `tvae --name 'tvae_Lpartial_dsprites'`
+- `tvae --name tvae_Lpartial_mnist`
+- `tvae --name tvae_Lpartial_dsprites`
 
 To rerun the experiments from Tables 1, you can run:
-- `tvae --name 'tvae_Lhalf_mnist'`
-- `tvae --name 'tvae_Lshort_mnist'`
-- `tvae --name 'bubbles_mnist'`
-- `tvae --name 'tvae_L0_mnist'`
-- `tvae --name 'nontvae_mnist'`
+- `tvae --name tvae_Lhalf_mnist`
+- `tvae --name tvae_Lshort_mnist`
+- `tvae --name bubbles_mnist`
+- `tvae --name tvae_L0_mnist`
+- `tvae --name nontvae_mnist`
 
 To rerun the experiments from Tables 2, you can run:
-- `tvae --name 'tvae_Lhalf_dsprites'`
-- `tvae --name 'tvae_Lpartial_dsprites'`
-- `tvae --name 'tvae_Lshort_dsprites'`
-- `tvae --name 'bubbles_dsprites'`
-- `tvae --name 'tvae_L0_dsprites'`
-- `tvae --name 'nontvae_dsprites'`
+- `tvae --name tvae_Lhalf_dsprites`
+- `tvae --name tvae_Lpartial_dsprites`
+- `tvae --name tvae_Lshort_dsprites`
+- `tvae --name bubbles_dsprites`
+- `tvae --name tvae_L0_dsprites`
+- `tvae --name nontvae_dsprites`
 
 To rerun the generalization experiment described in Section B.4 (resulting in Figures 1 and 6), you can run:
-- `tvae --name 'tvae_Lpartial_mnist_generalization'`
+- `tvae --name tvae_Lpartial_mnist_generalization`
 
 To rerun the experiments from Figures 22 and 23 (training on complex combined transformations), you can run:
-- `tvae --name 'tvae_Lpartial_perspective_mnist'`
-- `tvae --name 'tvae_Lpartial_rotcolor_mnist'`
+- `tvae --name tvae_Lpartial_perspective_mnist`
+- `tvae --name tvae_Lpartial_rotcolor_mnist`
 
 ## Basics of the framework
 - All models are built using the `TVAE` module (see `tvae/containers/tvae.py`) which requires a z-encoder, a u-encoder, a decoder, and a 'grouper'. The grouper module defines the topographic structure of the latent space through a `model` (equivalent to W in the paper), and a `padder` which defines the boundary conditions.
