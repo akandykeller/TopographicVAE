@@ -49,7 +49,7 @@ def train_epoch(model, optimizer, train_loader, log, savepath, epoch, eval_batch
                 model.plot_decoder_weights(wandb_on=wandb_on)
                 model.plot_encoder_weights(wandb_on=wandb_on)
 
-            Plot_Covariance_Matrix(s**2.0, s**2.0, name='Covariance_S**2_batch', wandb_on=wandb_on)
+            Plot_Covariance_Matrix(s**2.0, s**2.0, name='Covariance_Sxx2_batch', wandb_on=wandb_on)
 
             if plot_fullcaptrav:
                 model.plot_capsule_traversal(x_batched.detach(), 
@@ -122,7 +122,7 @@ def eval_epoch(model, val_loader, log, savepath, epoch, n_is_samples=100,
         all_labels = torch.cat(all_labels, 0)
     if plot_cov:
         Plot_Covariance_Matrix(all_s, all_s, name='Covariance_S_Full', wandb_on=wandb_on)
-        Plot_Covariance_Matrix(all_s**2.0, all_s**2.0, name='Covariance_S**2_Full', wandb_on=wandb_on)
+        Plot_Covariance_Matrix(all_s**2.0, all_s**2.0, name='Covariance_Sxx2_Full', wandb_on=wandb_on)
     if plot_maxact:
         Plot_MaxActImg(all_s, all_x, os.path.join(savepath, 'samples'), epoch, wandb_on=wandb_on)
     if plot_class_selectivity:
@@ -184,7 +184,7 @@ def train_epoch_dsprites(model, optimizer, train_loader, log, savepath, epoch, e
                 model.plot_decoder_weights(wandb_on=wandb_on)
                 model.plot_encoder_weights(wandb_on=wandb_on)
 
-            Plot_Covariance_Matrix(s**2.0, s**2.0, name='Covariance_S**2_batch', wandb_on=wandb_on)
+            Plot_Covariance_Matrix(s**2.0, s**2.0, name='Covariance_Sxx2_batch', wandb_on=wandb_on)
 
             if plot_fullcaptrav:
                 model.plot_capsule_traversal(x_batched.detach(), 
